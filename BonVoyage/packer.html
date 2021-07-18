@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="list.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #dddddd;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 10;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #000000;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #000000;
+  cursor: pointer;
+}
+</style>
+</head>
+<head>
+
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: white;
+  font-size: 16px;
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #000;
+  color: white;
+}
+
+.show {
+  display: block;
+}
+</style>
+</head>
+<header>
+
+<div class="navbar">
+  <a href="homepage.html">Home</a>
+  <a href="pack.html">Pack</a>
+  <a href="picker.html">Visit</a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Join
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+  </div>
+  </div> 
+</div>
+
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</header>
+<body>
+<br><br><br><br>
+<h2 style="font-family:arial;">Pack Buddy</h2>
+
+<div class="slidecontainer">
+  <p style="font-family:arial;">How many nights are you going away for?</p>
+  <p style="font-family:arial;">Nights: <span id="demo"></span></p>
+  <input type="range" min="1" max="20" value="10" class="slider" id="myRange">
+</div>
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submit {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #45a049;
+}
+
+
+</style>
+
+<div>
+  <form action="/action_page.php">
+    <label for="fname" style="font-family:arial;">Where are you going?</label>
+    <input type="text" id="dest" name="dest" placeholder="Destination...">
+
+    <label for="adults" style="font-family:arial;">How many adults are going?</label>
+    <select id="adults" name="adults">
+      <option value="0a">0</option>
+      <option value="1a">1</option>
+      <option value="2a">2</option>
+      <option value="3a">3</option>
+      <option value="4a">4</option>
+    </select>
+    <label for="childs" style="font-family:arial;">How many children are going </label>
+    <select id="childs" name="childs">
+      <option value="0c">0</option>
+      <option value="1c">1</option>
+      <option value="2c">2</option>
+      <option value="3c">3</option>
+      <option value="4c">4</option>
+    </select>
+  <head>
+<style>
+.buttoon {
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  border-radius: 8px;
+}
+
+.active, .buttoon:hover {
+  background-color: #e7e7e7; 
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+
+</style>
+</head>
+<p style="font-family:arial;">What is your main activity going to be?</p>
+<div id="activiti">
+<button class="buttoon"><i class="fa fa-compass" aria-hidden="true"></i> Hiking</button>
+<button class="buttoon"><i class="fa fa-sun-o" aria-hidden="true"></i> Sunbathing</button>
+<button class="buttoon"><i class="fa fa-snowflake-o" aria-hidden="true"></i> Skiing</button>
+<button class="buttoon"><i class="fa fa-road" aria-hidden="true"></i> Exploring</button>
+<button class="buttoon"><i class="fa fa-tint" aria-hidden="true"></i> Swimming</button>
+</div>
+  </form>
+<script>
+var header = document.getElementById("activiti");
+var btns = header.getElementsByClassName("buttoon");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  if (current.length > 0) { 
+    current[0].className = current[0].className.replace(" active", "");
+  }
+  this.className += " active";
+  });
+}
+</script>
+<a href="list.html"><button class="submit" value="Submit">Submit</button></a>
+</div>
+
+</body>
+</html>
