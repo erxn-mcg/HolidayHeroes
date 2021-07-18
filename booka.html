@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="list.js"></script>
+<head>
+
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: white;
+  font-size: 16px;
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #000;
+  color: white;
+}
+
+.show {
+  display: block;
+}
+</style>
+</head>
+<header>
+
+<div class="navbar">
+  <a href="homepage.html">Home</a>
+  <a href="pack.html">Pack</a>
+  <a href="picker.html">Visit</a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Join
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+  </div>
+  </div> 
+</div>
+
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</header>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 50%;
+  border-radius: 5px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.container {
+  padding: 2px 16px;
+}
+</style>
+</head>
+<body>
+<br><br><br>
+<div class="card">
+  <div class="container">
+    <p style="font-family:verdana" style="text-align: center">Check out the website of the hotel chosen specifically for you, or have a look at some of the other options!</p> 
+    <p style="font-family:verdana" style="text-align: center">Once you have booked your holiday, be sure to use the packer tool to ensure you don't forget anything!</p>
+  </div>
+</div>
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.button {
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  border-radius: 10px;
+  margin-left: 45%
+  
+}
+
+.button:hover {
+  background-color: #555555;
+  color: white;
+  border: 2px solid #000000;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="row">
+  <div class="column">
+    <h2 style="font-family:verdana" style="text-align:center">Paradise Resort Gold Coast</h2>
+  <iframe width = 90% src="https://paradiseresort.com.au"></iframe>
+
+  </div>
+  
+  <div class="column">
+  <h2 style="font-family:verdana" style="text-align:center">Hilton Surfers Paradise</h2>
+  <iframe width = 90% src="https://www.tripadvisor.co.uk/Hotel_Review-g261676-d287861-Reviews-RAC_Karri_Valley_Resort-Pemberton_Western_Australia.html"></iframe>
+ 
+  </div>
+  
+  <div class="column">
+  <h2 style="font-family:verdana" style="text-align:center">Karri Valley Resort</h2>
+  <iframe width = 90% src="https://www.tripadvisor.co.uk/Hotel_Review-g261676-d287861-Reviews-RAC_Karri_Valley_Resort-Pemberton_Western_Australia.html"></iframe>
+ 
+  </div>
+  <div class="column">
+    <h2 style="font-family:verdana" style="text-align:center">Longitude 131</h2>
+  <iframe width = 90% src="https://longitude131.com.au"></iframe>
+
+  </div>
+</div>
+
+</body>
+</html>
